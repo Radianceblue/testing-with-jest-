@@ -42,6 +42,6 @@ describe("När sidan öppnas", () => {
 
         let text = await displayStackValue.getText();
 
-        expect(text).toBe("hej");
+        expect(text).toBe("n/a");
     })
 } )

@@ -23,5 +23,5 @@ test('pop should returns most recent value', () => {
     stack.push("hej");
     
     let displayResult = stack.pop()
-    expect(displayResult).toBe(1);  
+    expect(displayResult).toBe("hej");  
 })
