@@ -34,3 +34,20 @@ describe('Clicking "Pusha till stacken"', () => {
         await alert.accept();
     });
 });
+
+// //Om stacken är tom ska det komma upp en alert som ber användaren att fylla i ett värde.
+describe("När man klickar på Pop knappen på en tom stack", () =>{
+    it('Should open an alert saying "fill the stack with value"', async () => {
+        
+        let pressPop = await driver.findElement(By.id('pop')); //Simulerar att vi klickar på knappen med id:et pop.
+        await pressPop.click();
+        
+        let alert = await driver.switchTo().alert(); 
+        let textAlert = await alert.getText();
+        
+        expect(textAlert).toBe("Stack is empty. Fill stack with value"); //ändra till undefiend när det blir rätt
+        await alert.accept();
+    });
+});
+
+
