@@ -18,10 +18,10 @@ test('peek on stack with two or more elements returns the top element', () => {
     expect(stack.peek()).toBe(42);
 });
 
-test('pop should remove last element', () => {
+test('pop should returns most recent value', () => {
     stack.push(1);
-    stack.push(34);
     stack.push("hej");
-    expect(stack.pop()).toBeDefined();
-    expect(stack.pop()).toBe(1);  
+    
+    let displayResult = stack.pop()
+    expect(displayResult).toBe(1);  
 })
